@@ -1,7 +1,7 @@
-
-
 # apiAutoTest
-
+[![GitHub stars](https://img.shields.io/github/stars/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/network)
+[![GitHub license](https://img.shields.io/github/license/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/blob/master/LICENSE)
 #### 介绍
 #### 软件架构
 | 名称       | 版本   | 作用 |
