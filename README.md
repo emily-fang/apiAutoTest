@@ -1,8 +1,9 @@
 # apiAutoTest
-> 使用Python为语言工具 + Python第三方库 实现的接口自动化测试工具
+
 [![GitHub stars](https://img.shields.io/github/stars/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/network)
 [![GitHub license](https://img.shields.io/github/license/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/blob/master/LICENSE)
+> 使用Python为语言工具 + Python第三方库 实现的接口自动化测试工具
 ## 实现功能
 - 测试数据隔离: 测试前后进行数据库备份/还原
 - 接口直接的数据依赖: 需要B接口使用A接口响应中的某个字段作为参数
