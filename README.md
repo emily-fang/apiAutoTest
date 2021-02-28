@@ -1,9 +1,14 @@
 # apiAutoTest
+> 使用Python为语言工具 + Python第三方库 实现的接口自动化测试工具
 [![GitHub stars](https://img.shields.io/github/stars/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/network)
 [![GitHub license](https://img.shields.io/github/license/zy7y/apiAutoTest)](https://github.com/zy7y/apiAutoTest/blob/master/LICENSE)
-
-#### 介绍
+## 实现功能
+- 测试数据隔离: 测试前后进行数据库备份/还原
+- 接口直接的数据依赖: 需要B接口使用A接口响应中的某个字段作为参数
+- 对接数据库： 讲数据库的查询结果可直接用于断言操作
+- 动态多断言： 可（多个）动态提取实际预期结果与指定的预期结果进行比较断言操作
+- 自定义扩展方法： 在用例中使用自定义方法(如：获取当前时间戳...)的返回值 
 #### 软件架构
 | 名称       | 版本   | 作用 |
 | -------- | -------- | ---- |
@@ -97,7 +102,6 @@
 3.  使用pycharm打开项目使用Terminal 输入 python3 -m venv venv 新建虚拟环境 （可选）
 4.  执行pip install -r requirements.txt 安装依赖库（若下载超时：pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt）
 5.  修改config.ymal文件中email文件配置邮箱，request_header配置初始请求头，database 配置数据库信息
-6.  ~~运行/test/test_api.py 文件~~
 6. 运行 `run.py`文件
 #### 用例说明文档
 ![case_data.xlsx用例说明文档](./image/用例说明文档.png)
@@ -116,6 +120,8 @@
 vue 电商项目实战
 教学视频：
 https://www.bilibili.com/video/BV1EE411B7SU?p=10
+
+服务提供者：https://space.bilibili.com/283273603?spm_id_from=333.788.b_636f6d6d656e74.6
 
 #### 测试报告
 
@@ -143,7 +149,6 @@ https://www.bilibili.com/video/BV1EE411B7SU?p=10
 > 如不需要使用该功能请做如下处理,如也不使用数据库对象，只需参考 https://gitee.com/zy7y/apiAutoTest/issues/I2BAQL 修改即可
 ![](https://gitee.com/zy7y/blog_images/raw/master/img/20210119184856.png)
 
-~~2021/01/27 添加eval语法糖，请求数据需要上个接口返回的id+1，实现基本的数学预算，使用形式具体查看excel用例文件及用例描述页，与报告对着看~~
 
 2021/02/27 添加hooks.py文件(可在此处自定义方法,并用于用例当中，注意请务必在定义的方法中使用return),移除上次更新的eval语法糖，增加用例处理前的日志
 ```log
@@ -165,13 +170,14 @@ https://www.bilibili.com/video/BV1EE411B7SU?p=10
 2021-02-27 15:09:45.050 | SUCCESS  | __main__:run:43 - 报告已生成
 ```
 
+
 #### 博客园首发
 https://www.cnblogs.com/zy7y/p/13426816.html
 
 #### Jenkins集成
 
 https://www.cnblogs.com/zy7y/p/13448102.html
-#### 视频教程（主要给大家讲这个Demo实现的一些思路， 后续将考虑从0-1录一个但能力有限，别有太多期许，一是免费二是开源）
+#### 视频教程（该视频为2020年8月开源时录制，大致内容是简单讲个文件作用，其代码对应目前的version1.0分支）
 B站：https://www.bilibili.com/video/BV1pv411i7zK/
 #### 联系我
 
